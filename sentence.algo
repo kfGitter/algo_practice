@@ -1,0 +1,18 @@
+ALGORITHM algorithm_name
+VAR
+    str:STRING ; str:= "The adventure is just starting."
+    vw:STRING ; vw := "a" "o" "i" "u" "e"
+    wd:STRING ; wd:="""."
+
+BEGIN
+    FOR i FROM 1 TO length(str) STEP i+1  DO
+        // Read sentence //
+        read(str) 
+        // Give number of characters //
+        count(str(i))
+        // Give number of words //
+        count wd(i)
+        // Give number of vowels //
+        count vw(i)
+    END_FOR
+END
