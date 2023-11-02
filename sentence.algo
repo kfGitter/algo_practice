@@ -8,10 +8,13 @@ BEGIN
     FOR i FROM 1 TO length(str) STEP i+1  DO
         // Read sentence //
         read(str) 
+        BREAK;
         // Give number of characters //
         count(str(i))
+        BREAK;
         // Give number of words //
         count wd(i)
+        BREAK;
         // Give number of vowels //
         count vw(i)
     END_FOR
