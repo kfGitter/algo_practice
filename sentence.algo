@@ -1,21 +1,22 @@
 ALGORITHM algorithm_name
 VAR
     str:STRING ; str:= "The adventure is just starting."
-    vw:STRING ; vw := "a" "o" "i" "u" "e"
-    wd:STRING ; wd:="""."
+    i: INTEGER;
+    crt:INTEGER:=length(str)    
+    vw:INTEGER:= 0
+    wd:INTEGER:= 0
 
 BEGIN
-    FOR i FROM 1 TO length(str) STEP i+1  DO
+    FOR i FROM 1 TO length(str) STEP 1  DO
         // Read sentence //
         read(str) 
-        BREAK;
-        // Give number of characters //
-        count(str(i))
-        BREAK;
-        // Give number of words //
-        count wd(i)
-        BREAK;
-        // Give number of vowels //
-        count vw(i)
+        IF (str[i]= "a" or str[i]= "o" or str[i]= "u" or str[i]= "e" or str[i]= "i" ) THEN 
+            vw= vw + 1
+        ELSE_IF    (str[i]= " " or str[i]=".") THEN 
+                wd= wd + 1
+        END_IF
     END_FOR
+    read("the number of character is egal to :" crt)
+    read("the number of vowels is egal to :" vw)
+    read("the number of words is egal to :" wd)
 END
